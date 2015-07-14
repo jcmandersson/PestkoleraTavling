@@ -1,0 +1,58 @@
+
+
+body {
+    background: url(http://pestkolera.se/img/bgs/noisy-top.png);
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+p, label, h1, table caption {
+    color: #FFF;
+    text-shadow: 1px 1px 1px #323232;
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: #E7E7E7;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.pest input {
+    border-color: rgba(97, 199, 237, 0.5);
+}
+.kolera input {
+    border-color: rgba(226, 46, 45, 0.5);
+}
+
+.pest input:focus {
+    border-color: rgba(97, 199, 237, 1);
+}
+
+.kolera input:focus {
+    border-color: rgba(226, 46, 45, 1);
+}
+
+.upvote, .downvote {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.upvote.active, .downvote.active {
+    color: #000;
+    opacity: 1;
+}
+
+.submit input {
+    background-color: #e7e7e7;
+    border-color: #b9b9b9;
+    color: #333333;
+}
+.submit input:focus, .submit input:hover {
+    color: #333333 !important;
+    background-color: #b9b9b9 !important;
+}
+
+.show_all {
+    color: #FFF;
+}
