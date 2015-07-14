@@ -2,7 +2,7 @@ var vote_function = function () {
   var tid = $(this).parent().attr('data-id');
   var $this = $(this);
   var vote = ($this.hasClass('upvote') ? 1 : -1);
-  $.get('http://pestkolera.se/app_top.php?vote=' + vote + '&tid=' + tid, function (data) {
+  $.get('http://pestkolera.se/app_top.php?vote=' + vote + '&tid=' + tid, function () {
     $this.parent().find('.active').removeClass('active');
     $this.addClass('active');
   });
@@ -12,7 +12,7 @@ var get_questions_factory = function (option) {
   return function (data) {
     var top_questions = JSON.parse(data);
     var $mall = $('.' + option + 'Questions tr.hide');
-    top_questions.forEach(function (e, i) {
+    top_questions.forEach(function (e) {
       var $e = $mall.clone().insertAfter($mall);
       $e.children('.pest').text(e.pest);
       $e.find('.kolera').text(e.kolera);
